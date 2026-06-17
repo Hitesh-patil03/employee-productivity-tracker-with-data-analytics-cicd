@@ -28,12 +28,12 @@ jobs:
       - name: Lint Frontend Code
         run: |
           cd frontend
-          npx eslint 
+          npx eslint .
       
       - name: Lint backend Code
         run: |
           cd backend
-          npx eslint 
+          npx eslint .
 
       
         
