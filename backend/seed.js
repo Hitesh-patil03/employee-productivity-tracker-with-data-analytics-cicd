@@ -8,7 +8,7 @@
  * Or use local:      mongodb://localhost:27017/produx
  */
 
-const MONGODB_URI = process.env.MONGODB_URI || ;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://sunny:Sunnyp123@cluster0.key5wpm.mongodb.net/produx?retryWrites=true&w=majority&appName=Cluster0';
 
 // ── Validate URI before doing anything ──
 if (!MONGODB_URI || MONGODB_URI === 'PASTE_YOUR_MONGODB_URI_HERE') {
