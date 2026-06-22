@@ -13,7 +13,7 @@ services:
       - "5000:5000"
     environment:
       - MONGODB_URI=mongodb+srv://sunny:Sunnyp123@cluster0.key5wpm.mongodb.net/produx?retryWrites=true&w=majority&appName=Cluster0
-      - JWT_SECRET=produx_jwt_secret_2024
+      - JWT_SECRET= "mysecret123"
       - JWT_EXPIRES_IN=7d
       - NODE_ENV=production
       - FRONTEND_URL=http://localhost
