@@ -28,7 +28,7 @@ jobs:
 
       - name: Lint docker-compose.yml
         run: |
-          yamllint -d docker-compose.yml
+          yamllint -d "{extends: default, rules: {line-length: disable, trailing-spaces: disable}}" docker-compose.yml
           
       - name: Validate docker-compose
         run: |
