@@ -1,4 +1,3 @@
----
 services:
   backend:
     image: hiteshpatil989/employee-tracker-backend:latest
