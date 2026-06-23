@@ -4,19 +4,16 @@ import axios from "axios";
 const AuthContext = createContext();
 
 // 🔥 API BASE URL (important)
-const API = "http://18.209.47.148";
+const API = "http://18.209.47.148:5000";  // 🔥 PORT ADD KAR
 
-export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-
-  // 🔥 LOGIN FUNCTION
-  const login = async (email, password, role) => {
-    try {
-      const res = await axios.post(`${API}/api/auth/login`, {
-        email,
-        password,
-        role,
-      });
+const login = async (email, password, role) => {
+  const res = await axios.post(`${API}/api/auth/login`, {
+    email,
+    password,
+    role,
+  });
+  return res.data;
+};
 
       // Save token
       localStorage.setItem("token", res.data.token);
