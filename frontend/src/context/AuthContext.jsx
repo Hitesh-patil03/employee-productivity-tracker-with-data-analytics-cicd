@@ -3,16 +3,19 @@ import axios from "axios";
 
 const AuthContext = createContext();
 
+// 🔥 API BASE URL (important)
+const API = "http://18.209.47.148";
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  // 🔥 LOGIN FUNCTION (FIXED)
+  // 🔥 LOGIN FUNCTION
   const login = async (email, password, role) => {
     try {
-      const res = await axios.post("http://18.209.47.148/api/auth/login", {
+      const res = await axios.post(`${API}/api/auth/login`, {
         email,
         password,
-        role, // ✅ IMPORTANT FIX
+        role,
       });
 
       // Save token
@@ -27,7 +30,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // 🔥 LOGOUT
+  // 🔥 LOGOUT FUNCTION
   const logout = () => {
     localStorage.removeItem("token");
     setUser(null);
@@ -40,5 +43,5 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-// Hook
+// 🔥 CUSTOM HOOK
 export const useAuth = () => useContext(AuthContext);
