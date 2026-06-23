@@ -97,9 +97,6 @@ npm start
 
 ##  Default Login
 
-* **Admin**
-  Email: `admin@produx.io`
-  Password: `Admin@123`
 
 * **Employees**
   Created and managed by admin
